@@ -24,6 +24,8 @@
   },
 
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -38,7 +40,6 @@
   "browserslist": {
     "production": [
       ">0.2%",
-      "not dead",
       "not op_mini all"
     ],
     "development": [
