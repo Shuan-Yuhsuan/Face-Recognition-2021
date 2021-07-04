@@ -90,7 +90,7 @@ class App extends Component {
     this.setState({imageUrl: this.state.input});
     
     // fetch the backend and call the Clarifai API there (for security concern, so process the API key in the backend)
-    fetch('http://localhost:3000/imageurl', {
+    fetch('https://friendly-chesterfield-45678.herokuapp.com/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -100,7 +100,7 @@ class App extends Component {
     .then(response => response.json())  // Remember to .json() the response when we use FETCH!
     .then(response => {
       if (response) {     // if face is detected
-        fetch('http://localhost:3000/image', {  // send the user.id to the server, and get his/her entries as response -> setState
+        fetch('https://friendly-chesterfield-45678.herokuapp.com/image', {  // send the user.id to the server, and get his/her entries as response -> setState
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({

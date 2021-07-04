@@ -27,7 +27,7 @@ class Register extends React.Component {
 
     // to send the signin input stored in the state to the backend server
     onSubmitSignIn = () => {
-        fetch('http://localhost:3000/register', {
+        fetch('https://friendly-chesterfield-45678.herokuapp.com/register', {
             // this is not the default GET request, so we need this second argument
             method: 'post',
             headers: {'Content-Type': 'application/json'},

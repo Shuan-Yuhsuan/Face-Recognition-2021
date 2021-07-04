@@ -22,7 +22,7 @@ class SignIn extends React.Component{
 
     // to send the signin input stored in the state to the backend server
     onSubmitSignIn = () => {
-        fetch('http://localhost:3000/signin', {
+        fetch('https://friendly-chesterfield-45678.herokuapp.com/signin', {
             // this is not the default GET request, so we need this second argument
             method: 'post',
             headers: {'Content-Type': 'application/json'},
